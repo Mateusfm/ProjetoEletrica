@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eletrica</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+
+ <div id="header-top">
+      <div id="header-top-left">
+ 	  <p id="p_cidade">
+	   Pinhal de Sao Bento
+	  </p>
+      </div>
+      <div id="header-top-right">
+          <p id="p_tel">
+            Central de vendas e <br> atendimento ao cliente 
+	  </p>
+	  <h3 id="h3_tel"> (46)8415-0075</h3>
+      </div>
+ </div>
+
+ <div id="header-wrap">
+    <h1><%= link_to "elétrica.com", root_path%></h1>
+    <nav>
+        <ul>
+           <li><%= link_to "Produtos", produtos_path%></li>
+           <li><%= link_to "Produtos", produtos_path %></li>
+           <li><%= link_to "Tira duvidas", produtos_path%></li>
+        </ul>
+    </nav>
+  </div>
+
+</header>
+
+<%= yield %>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

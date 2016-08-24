@@ -1,0 +1,12 @@
+<h1> Produtos </h1>
+
+<%= render 'form_search'%>
+
+  <ul> <% @produtos.each do |produto| %> 
+	  
+     <li> <%= link_to produto.complete_name, produto %> 
+	  <%=image_tag (produto.imagem)%>
+     </li> 
+       <% end %> 
+  </ul>
+
