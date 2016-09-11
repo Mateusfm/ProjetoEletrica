@@ -16,7 +16,7 @@ body {
   
 }
 
-.item active, .item {
+.item active {
 	width: 460px; 
         height: 345px;	
 }
