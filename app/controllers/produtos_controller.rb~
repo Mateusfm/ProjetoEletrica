@@ -7,12 +7,14 @@ class ProdutosController < ApplicationController
     @q = Produto.ransack(params[:q])
     @produtos = @q.result(distinct: true)   
 
-    @produtos = Produto.all
+   
   end
 
   # GET /produtos/1
   # GET /produtos/1.json
   def show
+	format.html { redirect_to @produto, notice: 'Produto criado com sucesso!' }
+        format.json { render :show, status: :created, location: @produto }
   end
 
   # GET /produtos/new

@@ -1,6 +1,6 @@
 <h1> Produtos </h1>
 
-<div class="container">
+<div class="container" width="460" height="245">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -15,7 +15,7 @@
 	  
      <li class="item active"> 
 	  <div>
-		<%= image_tag 'servicos-tecnicos.jpeg', :class => "item"%>
+		<%= link_to (image_tag 'servicos-tecnicos.jpeg'), services_path%>
 	  </div>
 	<div class="carousel-caption">
            <h3>Conheça nossos serviços</h3>
@@ -25,7 +25,8 @@
 
 	<% @produtos.each do |produto| %> 
      <li class="item"> 
-	  <%=image_tag produto.imagem, :class => "item"%>
+	  <%= link_to (image_tag produto.photo.url(:thumb)), render :template => produto%>
+	  <!--<%=image_tag produto.photo.url(:thumb)%> -->
      </li> 
        <% end %> 
   </ul>

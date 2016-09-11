@@ -24,8 +24,10 @@
   <div class="field">
     <%= f.label :category_id %><br/>
     <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
-    <span class="help">Ou crie um novo</span>
-    <%= f.text_field :new_category_name %>
+    <span class="help">Ou crie uma </span>
+
+    <%= link_to "Nova Categoria", controller: "categories", action: "new"%>
+    
   </div>
 
   <div class="field">

@@ -6,13 +6,12 @@ class ProdutosController < ApplicationController
   def index
     @q = Produto.ransack(params[:q])
     @produtos = @q.result(distinct: true)   
-
-   
   end
 
   # GET /produtos/1
   # GET /produtos/1.json
   def show
+	
   end
 
   # GET /produtos/new

@@ -16,7 +16,7 @@ body {
   
 }
 
-.item active {
+.item active, .item {
 	width: 460px; 
         height: 345px;	
 }
@@ -79,7 +79,7 @@ header {
 
   height: $header-height;  
    
-   h1 { 
+   .h1titulo { 
       float: left;
       
          
