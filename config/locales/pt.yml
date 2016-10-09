@@ -1,0 +1,52 @@
+pt:
+  confirmations:
+    success: Email confirmado com sucesso, obrigado!
+  users:
+    new: 
+      title: Cadastro
+    edit:
+      title: Editar perfil
+
+  signup:
+    confirm_email:
+      subject: 'Eletrica.com - Confirme seu email'
+      title: 'Seja bem vindo ao site Eletrica.com!'
+      body: |
+          Seja bem vindo a eletrica.com, %{name}.
+          No site Eletrica.com voce pode saber tudo sobre
+          nossa empresa, bem como conhecer nosso catalogo 
+          de produtos e servicos.
+
+      confirm_link_html: 'Para confirmar seu cadastro, 
+              acesse o
+              link: %{link}'
+      thanks_html: 'Obrigado por se cadastrar no %{link}.'
+
+  links:
+    back: Voltar
+
+  activerecord:
+    models:
+      user: Usuário
+      category: Categoria
+      post: Postagem
+      produto: Produto
+      service: Serviço
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirme sua senha
+      category:
+        name: Nome
+      post:
+        titulo: Título
+        subtitulo: Subtítulo
+        text: Texto
+      produto:
+        nome: Nome
+        descricao: Descrição
+      service:
+        title: Título
+        description: Descrição
