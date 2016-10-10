@@ -6,13 +6,21 @@ pt:
       title: Cadastro
     edit:
       title: Editar perfil
+    show:
+      edit: Editar perfil
+      title: "Perfil: %{user_name}"
+
+  user_session:
+    new:
+      title: Login
+      signup: Cadastre-se
 
   signup:
     confirm_email:
       subject: 'Eletrica.com - Confirme seu email'
       title: 'Seja bem vindo ao site Eletrica.com!'
       body: |
-          Seja bem vendo a eletrica.com, %{name}.
+          Seja bem vindo a eletrica.com, %{name}.
           No site Eletrica.com voce pode saber tudo sobre
           nossa empresa, bem como conhecer nosso catalogo 
           de produtos e servicos.
@@ -50,3 +58,17 @@ pt:
       service:
         title: Título
         description: Descrição
+  
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: Usuário ou senha inválido
+
+  helpers:
+    submit:
+      user_session:
+        create: Entrar

@@ -6,6 +6,14 @@ pt:
       title: Cadastro
     edit:
       title: Editar perfil
+    show:
+      edit: Editar perfil
+      title: "Perfil: %{user_name}"
+
+  user_sessions:
+    new:
+      title: Login
+      signup: Cadastre-se
 
   signup:
     confirm_email:
@@ -50,3 +58,17 @@ pt:
       service:
         title: Título
         description: Descrição
+  
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: Usuário ou senha inválido
+
+  helpers:
+    submit:
+      user_session:
+        create: Entrar
