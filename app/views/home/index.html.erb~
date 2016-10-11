@@ -25,7 +25,7 @@
 
 	<% @produtos.each do |produto| %> 
      <li class="item"> 
-	  <%= link_to (image_tag produto.photo.url(:thumb)), render :template => produto%>
+	  <%= link_to (image_tag produto.photo.url(:thumb)), produto%>
 	  <!--<%=image_tag produto.photo.url(:thumb)%> -->
      </li> 
        <% end %> 

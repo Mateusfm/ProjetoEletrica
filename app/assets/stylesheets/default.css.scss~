@@ -79,7 +79,7 @@ header {
 
   height: $header-height;  
    
-   .h1titulo { 
+   #h1titulo { 
       float: left;
       
          
@@ -123,9 +123,7 @@ header nav {
             color: #000000;
 	    
             &:hover { 
-               
-	       opacity: 0.5;
-  	       filter: alpha(opacity=50);
+              
             } 
          }
      }

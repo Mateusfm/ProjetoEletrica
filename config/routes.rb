@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+ scope ":locale", locale: /en|pt/ do
+  resources :users
   resources :posts
   resources :services
   resources :categories
   resources :contacts
   resources :produtos
+ end
+ 
+ resource :confirmation, only: [:show]
+ resource :user_sessions, only: [:create, :new, :destroy]
 
+  get '/:locale' => 'home#index', locale: /en|pt/
   root 'home#index'
 
 
