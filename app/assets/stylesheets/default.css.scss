@@ -117,15 +117,14 @@ header nav {
          vertical-align: middle;
 
          a { 
+	    color: #000000;
             display: block; 
             font-size: 12px; 
             font-weight: 600; 
-            color: #000000;
+            
 	    
             &:hover { 
-               
-	       opacity: 0.5;
-  	       filter: alpha(opacity=50);
+              
             } 
          }
      }
