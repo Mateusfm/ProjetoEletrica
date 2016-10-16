@@ -1,0 +1,10 @@
+class HomeController < ApplicationController
+   def index
+      @produtos = Produto.take(3)
+   end
+
+   def pagina_inicial
+	redirect_to root_path
+   end
+
+end

@@ -3,8 +3,7 @@
 <head>
   <title>Eletrica</title>
  
-  <meta charset="utf-8">
-  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> 
+  <meta charset="utf-8"> 
   
   <%= stylesheet_link_tag    "application", 
                media: "all", 
@@ -35,7 +34,7 @@
  </div>
 
  <div id="header-wrap">
-    <p id="h1titulo"><%= link_to "elétrica.com", root_path%></p>
+    <p id="h1titulo"><%= link_to "elétrica.com", redirect_to root_path%></p>
     <% if user_signed_in? %>
 	<%= render 'layouts/user_navbar' %>
     <% else %>
