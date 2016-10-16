@@ -6,15 +6,12 @@ class ProdutosController < ApplicationController
   def index
     @q = Produto.ransack(params[:q])
     @produtos = @q.result(distinct: true)   
-
-   
   end
 
   # GET /produtos/1
   # GET /produtos/1.json
   def show
-	format.html { redirect_to @produto, notice: 'Produto criado com sucesso!' }
-        format.json { render :show, status: :created, location: @produto }
+	
   end
 
   # GET /produtos/new
@@ -76,4 +73,8 @@ class ProdutosController < ApplicationController
     def produto_params
       params.require(:produto).permit(:nome, :descricao, :photo, :category_id)
     end
+
+   def pagina_inicial
+	redirect_to root_path
+   end
 end

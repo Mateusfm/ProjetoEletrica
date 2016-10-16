@@ -1,0 +1,11 @@
+<nav> 
+  <ul> 
+    <li><%= link_to t('layout.home'), root_path, method: :pagina_inicial%></li>
+    <li><%= link_to t('layout.produtos'), produtos_path %></li>
+    <li><%= link_to t('layout.services'), services_path %></li>
+    <li><%= link_to t('layout.posts'), posts_path %></li>
+    <li> <%= link_to t('layout.my_profile'), user_path(current_user) %> </li>
+    <li> <%= link_to t('layout.signout'), user_sessions_path, method: :delete %> </li> 
+  </ul>
+</nav>
+

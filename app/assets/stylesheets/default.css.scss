@@ -21,8 +21,6 @@ body {
         height: 345px;	
 }
 
-
-
 @mixin shadow($color, $x, $y, $radius) {
    -moz-box-shadow: $color $x $y $radius;
    -webkit-box-shadow: $color $x $y $radius; 
@@ -129,20 +127,3 @@ header nav {
          }
      }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

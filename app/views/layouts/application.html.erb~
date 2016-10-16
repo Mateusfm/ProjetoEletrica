@@ -3,22 +3,15 @@
 <head>
   <title>Eletrica</title>
  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 300px;
-      margin: auto;
-  }
-  </style>
+  <meta charset="utf-8"> 
+  
+  <%= stylesheet_link_tag    "application", 
+               media: "all", 
+               "data-turbolinks-track" => true %>
 
- <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "application", 
+               "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
 
 </head>
@@ -41,7 +34,7 @@
  </div>
 
  <div id="header-wrap">
-    <p id="h1titulo"><%= link_to "elétrica.com", root_path%></p>
+    <p id="h1titulo"><%= link_to "elétrica.com", redirect_to root_path%></p>
     <% if user_signed_in? %>
 	<%= render 'layouts/user_navbar' %>
     <% else %>
@@ -52,8 +45,21 @@
 
 </header>
 
-<%= yield %>
+ <div id="content"> 
+   <% if notice.present? %> 
+     <p id="notice">
+       <%= notice %>
+     </p> 
+   <% end %> 
+   <% if alert.present? %> 
+     <p id="alert">
+       <%= alert %>
+     </p> 
+   <% end %>
 
+  <%= yield %>
+
+ </div>
 </body>
 </html>
 
