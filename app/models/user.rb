@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+ enum role: [:nomal_user, :admin]
  EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
  scope :confirmed, -> { where.not(confirmed_at: nil) }

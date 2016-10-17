@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "pundit"
+
 gem 'bcrypt', '~> 3.1.7' 
 
 #gem para upload de imagens

@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
- 
   <%= image_tag(@produto.photo.url(:thumb)) %>
 </p>
 
@@ -13,6 +12,11 @@
 <p>
   <strong>Descricao:</strong>
   <%= @produto.descricao %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @produto.category_id %>
 </p>
 
 <%= link_to 'Edit', edit_produto_path(@produto) %> |

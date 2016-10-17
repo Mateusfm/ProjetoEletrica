@@ -39,9 +39,9 @@ class ProdutosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /produtos/1
-  # PATCH/PUT /produtos/1.json
+
   def update
+    authorize @produto
     respond_to do |format|
       if @produto.update(produto_params)
         format.html { redirect_to @produto, notice: 'Produto was successfully updated.' }
@@ -53,8 +53,7 @@ class ProdutosController < ApplicationController
     end
   end
 
-  # DELETE /produtos/1
-  # DELETE /produtos/1.json
+ 
   def destroy
     @produto.destroy
     respond_to do |format|
