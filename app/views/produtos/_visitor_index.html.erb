@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Imagem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.nome %>
+	    <%=image_tag (produto.imagem)%>
+        </td>
+        <td><%= produto.descricao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

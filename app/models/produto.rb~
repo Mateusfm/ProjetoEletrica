@@ -25,7 +25,7 @@ def imagem
 end
 
 def imagemSlide
-    "#{photo.url(:original)}"
+    "#{photo.url(:medium)}"
 end
 
 end

@@ -1,5 +1,7 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
+  before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create]
+
 
   # GET /produtos
   # GET /produtos.json
@@ -14,19 +16,25 @@ class ProdutosController < ApplicationController
 	
   end
 
-  # GET /produtos/new
+  
   def new
-    @produto = Produto.new
+    if current_user.admin?
+      @produto = Produto.new
+    else
+      user_not_authorized
+    end
   end
 
-  # GET /produtos/1/edit
+
   def edit
+    authorize @produto
   end
 
-  # POST /produtos
-  # POST /produtos.json
+ 
   def create
     @produto = Produto.new(produto_params)
+
+    authorize @produto
 
     respond_to do |format|
       if @produto.save
@@ -41,8 +49,10 @@ class ProdutosController < ApplicationController
 
 
   def update
-    authorize @produto
     respond_to do |format|
+
+      authorize @produto
+
       if @produto.update(produto_params)
         format.html { redirect_to @produto, notice: 'Produto was successfully updated.' }
         format.json { render :show, status: :ok, location: @produto }
@@ -55,7 +65,11 @@ class ProdutosController < ApplicationController
 
  
   def destroy
+
+    authorize @produto
+
     @produto.destroy
+
     respond_to do |format|
       format.html { redirect_to produtos_url, notice: 'Produto was successfully destroyed.' }
       format.json { head :no_content }
