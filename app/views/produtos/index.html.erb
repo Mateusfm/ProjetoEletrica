@@ -1,19 +1,24 @@
  <%= render 'form_search'%>
 
-   <% if user_signed_in? %>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Imagem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-      <% if policy(@produtos).index? %>
+  <tbody>
 
-         <%= render 'admin_index' %>
-
-      <% else %>
-
-         <%= render 'visitor_index' %>
-
-      <% end %>
-  
-  <% else %>
-   
-    <%= render 'visitor_index' %>
-  
-  <% end %>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.nome %>
+	    <%= link_to (image_tag (produto.imagem)), produto%>
+        </td>
+        <td><%= produto.descricao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

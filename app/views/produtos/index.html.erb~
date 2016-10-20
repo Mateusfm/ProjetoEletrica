@@ -2,18 +2,18 @@
 
    <% if user_signed_in? %>
 
-    <% if policy(@produtos).index? %>
+      <% if policy(@produtos).index? %>
 
-      <%= render 'admin_index' %>
+         <%= render 'admin_index' %>
 
-    <% else %>
+      <% else %>
 
-      <%= render 'visitor_index' %>
+         <%= render 'visitor_index' %>
 
-    <% end %>
+      <% end %>
   
   <% else %>
    
-   <%= render 'visitor_index' %>
+    <%= render 'visitor_index' %>
   
   <% end %>

@@ -1,19 +1,15 @@
 <%= form_for(@produto, :html => { :multipart => true }) do |f| %>
   <% if @produto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+      Há erros no formulário, por favor verifique. 
 
-      <ul>
-      <% @produto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= f.label :nome %><br>
     <%= f.text_field :nome %>
+    <%= error_tag @produto, :nome %> 
   </div>
 
   <div class="field">
@@ -24,8 +20,10 @@
   <div class="field">
     <%= f.label :category_id %><br/>
     <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
-    <span class="help">Ou crie um novo</span>
-    <%= f.text_field :new_category_name %>
+    <span class="help">Ou crie uma </span>
+
+    <%= link_to "Nova Categoria", controller: "categories", action: "new"%>
+    
   </div>
 
   <div class="field">

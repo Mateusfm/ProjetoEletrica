@@ -13,7 +13,7 @@
     <% @produtos.each do |produto| %>
       <tr>
         <td><%= produto.nome %>
-	    <%=image_tag (produto.imagem)%>
+	    <%= link_to (image_tag (produto.imagem)), produto%>
         </td>
         <td><%= produto.descricao %></td>
       </tr>

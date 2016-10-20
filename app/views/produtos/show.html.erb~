@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <%= image_tag(@produto.photo.url(:thumb)) %>
 </p>
@@ -16,8 +14,16 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @produto.category_id %>
+  <%= @produto.category.name %>
 </p>
 
-<%= link_to 'Edit', edit_produto_path(@produto) %> |
+<% if user_signed_in? %>
+ <% if policy(@produto).new? %>
+
+  <%= link_to 'Edit', edit_produto_path(@produto) %> |
+  <%= link_to 'New Produto', new_produto_path %>
+
+ <% end %>
+<% end %>
+
 <%= link_to 'Back', produtos_path %>
