@@ -1,5 +1,5 @@
 <p>
-  <%= image_tag(@produto.photo.url(:thumb)) %>
+  <%= image_tag(@produto.imagem) %>
 </p>
 
 <p>

@@ -1,24 +1,21 @@
  <%= render 'form_search'%>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Descricao</th>
-      <th>Imagem</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
     <% @produtos.each do |produto| %>
-      <tr>
-        <td><%= produto.nome %>
-	    <%= link_to (image_tag (produto.imagem)), produto%>
-        </td>
-        <td><%= produto.descricao %></td>
-      </tr>
+
+      <div>
+
+        <div> 
+	   <%= link_to (image_tag (produto.imagem)), produto%> 
+	</div>
+
+        <div> 
+	   <%= produto.nome %> 
+	</div>
+	
+	<div> 
+	   <%= produto.descricao %> 
+	</div>
+
+      </div>
+
     <% end %>
-  </tbody>
-</table>

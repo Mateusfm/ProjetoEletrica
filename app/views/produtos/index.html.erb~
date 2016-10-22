@@ -1,19 +1,17 @@
  <%= render 'form_search'%>
 
-   <% if user_signed_in? %>
+    <% @produtos.each do |produto| %>
 
-      <% if policy(@produtos).index? %>
+      <div>
 
-         <%= render 'admin_index' %>
+        <div> 
+	   <%= link_to (image_tag (produto.imagem)), produto%> 
+	</div>
 
-      <% else %>
+        <div> 
+	   <%= produto.complete_name %> 
+	</div>
 
-         <%= render 'visitor_index' %>
+      </div>
 
-      <% end %>
-  
-  <% else %>
-   
-    <%= render 'visitor_index' %>
-  
-  <% end %>
+    <% end %>

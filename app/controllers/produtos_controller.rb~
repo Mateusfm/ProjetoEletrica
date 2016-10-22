@@ -3,8 +3,6 @@ class ProdutosController < ApplicationController
   before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create]
 
 
-  # GET /produtos
-  # GET /produtos.json
   def index
     @q = Produto.ransack(params[:q])
     @produtos = @q.result(distinct: true)   
@@ -27,7 +25,7 @@ class ProdutosController < ApplicationController
 
 
   def edit
-    
+    authorize @produto
   end
 
  
