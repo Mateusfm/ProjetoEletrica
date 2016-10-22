@@ -9,11 +9,8 @@ class Post < ActiveRecord::Base
                      ['image/jpg', 'image/png', 'image/jpeg'] }
 
 def imagem
-    "#{photo.url(:original)}"
-end
-
-def imagem_mini
     "#{photo.url(:thumb)}"
 end
+
 
 end

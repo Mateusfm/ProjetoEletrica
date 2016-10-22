@@ -9,3 +9,12 @@
 <div>
   <%= @service.description %>
 </div>
+
+<% if user_signed_in? %>
+ <% if policy(@service).new? %>
+
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+  <%= link_to 'New Service', new_service_path %>
+  <%= link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
+<% end %>

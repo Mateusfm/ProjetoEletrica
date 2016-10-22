@@ -1,6 +1,7 @@
 <%= form_for(@produto, :html => { :multipart => true }) do |f| %>
   <% if @produto.errors.any? %>
     <div id="error_explanation">
+
       Há erros no formulário, por favor verifique. 
 
     </div>
@@ -21,6 +22,7 @@
   <div class="field">
     <%= f.label :category_id %><br/>
     <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
+
     <span class="help">Ou crie uma </span>
 
     <%= link_to "Nova Categoria", controller: "categories", action: "new"%>
@@ -32,6 +34,7 @@
     <%= f.file_field :photo %>
     <%= error_tag @produto, :photo %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

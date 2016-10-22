@@ -3,6 +3,8 @@
   <div>
     <% @posts.each do |post| %>
    
+      <% link_to (post) do %>
+
         <div>
 	  <%= post.titulo %>
 	</div>
@@ -19,5 +21,6 @@
 	  <%= post.texto %>
 	</div>
 
+      <% end %>
     <% end %>
   </div>

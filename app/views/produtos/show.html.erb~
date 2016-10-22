@@ -22,8 +22,6 @@
 
   <%= link_to 'Edit', edit_produto_path(@produto) %> |
   <%= link_to 'New Produto', new_produto_path %>
-
+  <%= link_to 'Destroy', @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
  <% end %>
 <% end %>
-
-<%= link_to 'Back', produtos_path %>
