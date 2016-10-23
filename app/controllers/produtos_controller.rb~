@@ -8,19 +8,16 @@ class ProdutosController < ApplicationController
     @produtos = @q.result(distinct: true)   
   end
 
-  # GET /produtos/1
-  # GET /produtos/1.json
+
   def show
 	
   end
 
   
   def new
-    if current_user.admin?
+      authorize Produto
       @produto = Produto.new
-    else
-      user_not_authorized
-    end
+    
   end
 
 

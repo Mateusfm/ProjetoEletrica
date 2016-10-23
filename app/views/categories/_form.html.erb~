@@ -10,9 +10,7 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-    <%= error_tag @category, :name %> 
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

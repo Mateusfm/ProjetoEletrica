@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :require_no_authentication, only: [:new, :create]
-  before_action :can_change, only: [:edit, :update]
-  
+  before_action :can_change, only: [:edit, :update, :destroy]
+  before_action :require_authentication, only: [:index]
 
   def index
+    authorize User
     @users = User.all
   end
 

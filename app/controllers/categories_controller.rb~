@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create, :index]
+  before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create]
   
   def index
     authorize Category

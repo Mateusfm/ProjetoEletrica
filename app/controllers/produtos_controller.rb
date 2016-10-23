@@ -15,11 +15,9 @@ class ProdutosController < ApplicationController
 
   
   def new
-    if current_user.admin?
+      authorize Produto
       @produto = Produto.new
-    else
-      user_not_authorized
-    end
+    
   end
 
 

@@ -12,11 +12,8 @@ class ServicesController < ApplicationController
 
 
   def new
-    if current_user.admin?
+      authorize Service
       @service = Service.new
-    else
-      user_not_authorized
-    end
   end
 
 
