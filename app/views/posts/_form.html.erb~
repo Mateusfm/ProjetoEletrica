@@ -8,25 +8,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %><br>
+    <%= f.label :titulo %>
     <%= f.text_field :titulo %>
     <%= error_tag @post, :titulo %>
   </div>
 
   <div class="field">
-    <%= f.label :subtitulo %><br>
+    <%= f.label :subtitulo %>
     <%= f.text_field :subtitulo %>
     <%= error_tag @post, :subtitulo %>
   </div>
 
   <div class="field">
-    <%= f.label :photo, "Photo" %><br>
+    <%= f.label :photo %>
     <%= f.file_field :photo %>
     <%= error_tag @post, :photo %>
   </div>
 
   <div class="field">
-    <%= f.label :texto %><br>
+    <%= f.label :texto %>
     <%= f.text_area :texto %>
     <%= error_tag @post, :texto %>
   </div>

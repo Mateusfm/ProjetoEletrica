@@ -8,19 +8,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br>
+    <%= f.label :nome %>
     <%= f.text_field :nome %>
     <%= error_tag @produto, :nome %> 
   </div>
 
   <div class="field">
-    <%= f.label :descricao %><br>
+    <%= f.label :descricao %>
     <%= f.text_area :descricao %>
     <%= error_tag @produto, :descricao %>
   </div>
 
   <div class="field">
-    <%= f.label :category_id %><br/>
+    <%= f.label :category_id %>
     <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
 
     <span class="help">Ou crie uma </span>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :photo %><br>
+    <%= f.label :photo %>
     <%= f.file_field :photo %>
     <%= error_tag @produto, :photo %>
   </div>

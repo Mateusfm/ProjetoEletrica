@@ -8,13 +8,13 @@
 
 <%= form_for @user_session do |f| %>
   <p>
-     <%= f.label :email %> </BR>
+     <%= f.label :email %>
      <%= f.text_field :email %>
      <%= error_tag @user_session, :email %>
   </p>
 
   <p>
-     <%= f.label :password %> </BR>
+     <%= f.label :password %>
      <%= f.password_field :password %>
      <%= error_tag @user_session, :password %> 
   </p>

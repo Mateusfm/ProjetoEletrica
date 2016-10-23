@@ -14,7 +14,7 @@
   </p>
 
   <p>
-     <%= f.label :password %>
+     <%= f.label :password %> </BR>
      <%= f.password_field :password %>
      <%= error_tag @user_session, :password %> 
   </p>

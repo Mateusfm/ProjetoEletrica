@@ -8,19 +8,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
     <%= error_tag @service, :title %>
   </div>
 
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description %>
     <%= f.text_area :description %>
     <%= error_tag @service, :description %>
   </div>
 
   <div class="field">
-    <%= f.label :photo %><br>
+    <%= f.label :photo %>
     <%= f.file_field :photo %>
     <%= error_tag @service, :photo %>
   </div>
