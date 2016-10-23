@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Users</h1>
+<h1> <%= t 'users.listing'%> </h1>
 
 <table>
   <thead>
@@ -18,14 +16,10 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.show'), user %></td>
+        <td><%= link_to t('links.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('links.destroy'), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>

@@ -1,6 +1,7 @@
 <%= form_for(@produto, :html => { :multipart => true }) do |f| %>
   <% if @produto.errors.any? %>
     <div id="error_explanation">
+
       Há erros no formulário, por favor verifique. 
 
     </div>
@@ -29,7 +30,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :photo, "Photo" %><br>
+    <%= f.label t 'services.photo' %><br>
     <%= f.file_field :photo %>
     <%= error_tag @produto, :photo %>
   </div>

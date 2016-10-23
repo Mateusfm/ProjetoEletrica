@@ -2,4 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to t('links.back'), posts_path %>
+<%= link_to 'Back', posts_path %>

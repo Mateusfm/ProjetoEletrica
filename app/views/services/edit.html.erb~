@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to t('links.show'), @service %> |
-<%= link_to t('links.back'), services_path %>
+<%= link_to t('links.back), services_path %>

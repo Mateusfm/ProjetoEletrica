@@ -1,4 +1,4 @@
-<h1> <%= t 'services.new.title' %> </h1>
+<h1> <%= t 'services.new.title %> </h1>
 
 <%= render 'form' %>
 

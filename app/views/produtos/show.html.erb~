@@ -3,26 +3,19 @@
 </p>
 
 <p>
-  <strong>Nome:</strong>
   <%= @produto.nome %>
 </p>
 
 <p>
-  <strong>Descricao:</strong>
   <%= @produto.descricao %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @produto.category.name %>
 </p>
 
 <% if user_signed_in? %>
  <% if policy(@produto).new? %>
 
-  <%= link_to 'Edit', edit_produto_path(@produto) %> |
-  <%= link_to 'New Produto', new_produto_path %>
-  <%= link_to 'Destroy', @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to t('links.edit'), edit_produto_path(@produto) %> |
+  <%= link_to t('produtos.link.new'), new_produto_path %> |
+  <%= link_to t('links.destroy'), @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
 
  <% end %>
 <% end %>

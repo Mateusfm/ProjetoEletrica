@@ -1,12 +1,7 @@
-<% if policy(@produto).update? %>
+<h1><%= t 'produtos.edit.title' %></h1>
 
-	<h1>Editing Produto</h1>
+<%= render 'form' %>
 
-	<%= render 'form' %>
+<%= link_to t('links.show'), @produto %> |
+<%= link_to t('links.back'), produtos_path %>
 
-	<%= link_to 'Show', @produto %>
-	<%= link_to 'Back', produtos_path %>
-
-<% else %>
-	<h1> Pagina nao encontrada 404 </h1>
-<% end %>
