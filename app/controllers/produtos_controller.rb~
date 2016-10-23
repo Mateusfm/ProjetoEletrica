@@ -1,35 +1,35 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
+  before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create]
 
-  # GET /produtos
-  # GET /produtos.json
+
   def index
     @q = Produto.ransack(params[:q])
     @produtos = @q.result(distinct: true)   
-
-   
   end
 
-  # GET /produtos/1
-  # GET /produtos/1.json
+
   def show
-	format.html { redirect_to @produto, notice: 'Produto criado com sucesso!' }
-        format.json { render :show, status: :created, location: @produto }
+	
   end
 
-  # GET /produtos/new
+  
   def new
-    @produto = Produto.new
+      authorize Produto
+      @produto = Produto.new
+    
   end
 
-  # GET /produtos/1/edit
+
   def edit
+    authorize @produto
   end
 
-  # POST /produtos
-  # POST /produtos.json
+ 
   def create
     @produto = Produto.new(produto_params)
+
+    authorize @produto
 
     respond_to do |format|
       if @produto.save
@@ -42,10 +42,12 @@ class ProdutosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /produtos/1
-  # PATCH/PUT /produtos/1.json
+
   def update
     respond_to do |format|
+
+      authorize @produto
+
       if @produto.update(produto_params)
         format.html { redirect_to @produto, notice: 'Produto was successfully updated.' }
         format.json { render :show, status: :ok, location: @produto }
@@ -56,10 +58,13 @@ class ProdutosController < ApplicationController
     end
   end
 
-  # DELETE /produtos/1
-  # DELETE /produtos/1.json
+ 
   def destroy
+
+    authorize @produto
+
     @produto.destroy
+
     respond_to do |format|
       format.html { redirect_to produtos_url, notice: 'Produto was successfully destroyed.' }
       format.json { head :no_content }

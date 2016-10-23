@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011152807) do
+ActiveRecord::Schema.define(version: 20161022165802) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 20161011152807) do
     t.string   "titulo"
     t.string   "subtitulo"
     t.text     "texto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "produtos", force: :cascade do |t|
@@ -53,11 +57,12 @@ ActiveRecord::Schema.define(version: 20161011152807) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "password_digest"
     t.datetime "confirmed_at"
     t.string   "confirmation_token"
+    t.integer  "role",               default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

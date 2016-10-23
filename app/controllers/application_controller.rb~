@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
-  delegate :current_user, :user_signed_in?, to: :user_session
+  include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   protect_from_forgery with: :exception
+
+  delegate :current_user, :user_signed_in?, to: :user_session
+  helper_method :current_user, :user_signed_in?
 
   before_action do
     I18n.locale = params[:locale] || I18n.default_locale
@@ -27,4 +31,11 @@ class ApplicationController < ActionController::Base
          notice: t('flash.notice.already_logged_in')
      end
   end
+
+ private
+  def user_not_authorized
+    flash[:notice] = "Voce nao tem autorizacao"
+    redirect_to(request.referrer || root_path)
+  end
+
 end

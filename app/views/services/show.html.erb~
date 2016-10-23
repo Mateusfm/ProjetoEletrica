@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <%= image_tag(@service.imagem) %>
+</div>
 
-<p>
-  <strong>Title:</strong>
+<div>
   <%= @service.title %>
-</p>
+</div>
 
-<p>
-  <strong>Description:</strong>
+<div>
   <%= @service.description %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+<% if user_signed_in? %>
+ <% if policy(@service).new? %>
+
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+  <%= link_to 'New Service', new_service_path %>
+  <%= link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
+<% end %>

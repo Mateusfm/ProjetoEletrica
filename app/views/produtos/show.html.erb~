@@ -1,8 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <p>
- 
-  <%= image_tag(@produto.photo.url(:thumb)) %>
+  <%= image_tag(@produto.imagem) %>
 </p>
 
 <p>
@@ -15,5 +12,17 @@
   <%= @produto.descricao %>
 </p>
 
-<%= link_to 'Edit', edit_produto_path(@produto) %> |
-<%= link_to 'Back', produtos_path %>
+<p>
+  <strong>Category:</strong>
+  <%= @produto.category.name %>
+</p>
+
+<% if user_signed_in? %>
+ <% if policy(@produto).new? %>
+
+  <%= link_to 'Edit', edit_produto_path(@produto) %> |
+  <%= link_to 'New Produto', new_produto_path %>
+  <%= link_to 'Destroy', @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ <% end %>
+<% end %>

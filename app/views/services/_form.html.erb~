@@ -1,27 +1,26 @@
-<%= form_for(@service) do |f| %>
+<%= form_for(@service, :html => { :multipart => true }) do |f| %>
   <% if @service.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
-      <ul>
-      <% @service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+      Há erros no formulário, por favor verifique. 
+
     </div>
   <% end %>
 
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
+    <%= error_tag @service, :title %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
+    <%= error_tag @service, :description %>
   </div>
   <div class="field">
     <%= f.label :photo, "Photo" %><br>
     <%= f.file_field :photo %>
+    <%= error_tag @service, :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>

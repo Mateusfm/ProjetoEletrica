@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   protect_from_forgery with: :exception
 
   delegate :current_user, :user_signed_in?, to: :user_session
@@ -29,4 +31,11 @@ class ApplicationController < ActionController::Base
          notice: t('flash.notice.already_logged_in')
      end
   end
+
+ private
+  def user_not_authorized
+    flash[:notice] = "Pagina reservada...!"
+    redirect_to(request.referrer || root_path)
+  end
+
 end
