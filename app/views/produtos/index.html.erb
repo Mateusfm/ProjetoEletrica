@@ -2,20 +2,20 @@
 
     <% @produtos.each do |produto| %>
 
-      <div>
+    <div>
 
-        <div> 
-	   <%= link_to (image_tag (produto.imagem)), produto%> 
-	</div>
+	<div class="catalog-celula">
+                        <div class="img">
+                	   <%= link_to (image_tag (produto.imagem)), produto%>
+                        </div>
 
-        <div> 
-	   <%= produto.nome %> 
-	</div>
-	
-	<div> 
-	   <%= produto.descricao %> 
-	</div>
+                	<div class="desc">
+                	   <%= produto.nome %>
 
-      </div>
+                	   <%= produto.descricao %>
+                	</div>
+
+            </div>
+     </div>
 
     <% end %>

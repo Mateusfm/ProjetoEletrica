@@ -1,13 +1,13 @@
 <%= search_form_for @q do |f|%>
 
-   <%= f.label t ('aplication.pesquisar')%>
-   <%= f.search_field :nome_cont%>
 
-   <select name="q[category_id_in]" id="q_category_id_in">
-     <option value="">- Todas -</option>
-     <%= options_from_collection_for_select Category.all, 'id', 'name' %>  
+   <%= f.search_field :nome_cont, class: "search_field", placeholder: "Pesquisar.."%>
+
+   <select name="q[category_id_in]" id="q_category_id_in", class="btn">
+     <option value="">- Categorias -</option>
+     <%= options_from_collection_for_select Category.all, 'id', 'name'%>
    </select>
 
-   <%= f.submit %>
+   <%= f.submit  'Pesquisar', :class => 'btn'%>
 <% end %>
 

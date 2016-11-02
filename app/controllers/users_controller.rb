@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_no_authentication, only: [:new, :create]
-  before_action :can_change, only: [:edit, :update, :destroy]
+  before_action :can_change, only: [:edit, :update, :destroy, :show]
   before_action :require_authentication, only: [:index]
 
   def index
@@ -69,7 +69,7 @@ class UsersController < ApplicationController
     end
 
     def can_change
-       unless user_signed_in? && current_user == user
+       unless user_signed_in? && current_user == user || current_user.admin?
          redirect_to user_path(params[:id])
        end
     end

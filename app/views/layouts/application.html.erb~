@@ -46,6 +46,7 @@
 </header>
 
  <div id="content"> 
+
    <% if notice.present? %> 
      <p id="notice">
        <%= notice %>
@@ -57,9 +58,12 @@
      </p> 
    <% end %>
 
-  <%= yield %>
+   <%= yield %>
 
  </div>
+
+ <%= render "rodape" %>
+
 </body>
 </html>
 

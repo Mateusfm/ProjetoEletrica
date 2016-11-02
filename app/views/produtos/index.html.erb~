@@ -4,13 +4,17 @@
 
       <div>
 
-        <div> 
-	   <%= link_to (image_tag (produto.imagem)), produto%> 
-	</div>
+		<div> 
+		   <%= link_to (image_tag (produto.imagem)), produto%> 
+		</div>
 
-        <div> 
-	   <%= produto.complete_name %> 
-	</div>
+		<div> 
+		   <%= produto.nome %> 
+		</div>
+	
+		<div> 
+		   <%= produto.descricao %> 
+		</div>
 
       </div>
 

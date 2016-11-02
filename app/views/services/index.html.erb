@@ -1,17 +1,21 @@
     <% @services.each do |service| %>
-      <div>
-        <div>
-          <%= link_to (image_tag (service.imagem)), service%>
-        </div>
-	
-	<div>
- 	  <%= service.title %>
-	</div>
+    <div class="feed-body">
+            <div class="feed-img">
+              <%= link_to (image_tag (service.imagem)), service%>
+            </div>
 
-	<div>
- 	  <%= service.description %>
-	</div>
+      <div class="feed-text">
+
+        	<h1>
+         	  <%= service.title %>
+        	</h1>
+
+        	<p>
+         	  <%= service.description %>
+        	</p>
 
       </div>
+
+    </div>
 
     <% end %>

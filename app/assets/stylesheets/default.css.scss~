@@ -115,14 +115,15 @@ header nav {
          vertical-align: middle;
 
          a { 
-	    color: #000000;
+	    color: #FFFFFF;
             display: block; 
             font-size: 12px; 
             font-weight: 600; 
             
 	    
             &:hover { 
-              
+               color: #000000;
+	
             } 
          }
      }
@@ -132,6 +133,9 @@ header nav {
 	text-align: left; 
 	width: $content-width; 
 	margin: 0 auto;
+	
+	@include shadow(#ccc, 0, 0px, 6px);
+        
 
  h1 { 
 	font-size: 1.5em; 
@@ -149,6 +153,7 @@ header nav {
 	margin: 10px 0; 
  }
 
+}
 
 form{
    label{
@@ -224,7 +229,11 @@ form{
  }
 
 
+ footer { 
+	margin-top: 100px;	
+	border: 1px solid black; 
 
+ }
 
 }
 

@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>Eletrica</title>
- 
-  <meta charset="utf-8"> 
-  
-  <%= stylesheet_link_tag    "application", 
-               media: "all", 
+
+  <meta charset="utf-8">
+
+  <%= stylesheet_link_tag    "application",
+               media: "all",
                "data-turbolinks-track" => true %>
 
-  <%= javascript_include_tag "application", 
+  <%= javascript_include_tag "application",
                "data-turbolinks-track" => true %>
 
   <%= csrf_meta_tags %>
@@ -27,7 +27,7 @@
       </div>
       <div id="header-top-right">
           <p id="p_tel">
-            Central de vendas e <br> atendimento ao cliente 
+            Central de vendas e <br> atendimento ao cliente
 	  </p>
 	  <h4 id="h3_tel"> (46)8415-0075</h4>
       </div>
@@ -45,22 +45,25 @@
 
 </header>
 
- <div id="content"> 
+ <div class="content">
 
-   <% if notice.present? %> 
+   <% if notice.present? %>
      <p id="notice">
        <%= notice %>
-     </p> 
-   <% end %> 
-   <% if alert.present? %> 
+     </p>
+   <% end %>
+   <% if alert.present? %>
      <p id="alert">
        <%= alert %>
-     </p> 
+     </p>
    <% end %>
 
    <%= yield %>
 
  </div>
+
+ <%= render 'layouts/rodape' %>
+
 </body>
 </html>
 

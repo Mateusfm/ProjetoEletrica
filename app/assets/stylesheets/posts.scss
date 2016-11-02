@@ -1,3 +1,74 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.feed-img {
+    margin: 5px;
+    float: left;
+    width: 300px;
+    height: 200px;
+
+}
+
+.feed-text {
+    margin: 5px;
+    float: left;
+    width: 300px;
+    height: 200px;
+
+}
+
+div.feed-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+
+div.feed-text h1 {
+    color:#2E8B57;
+    font-size: 2.0em;
+}
+
+.link-title {
+    color:#2E8B57;
+    font-size: 2.0em;
+}
+
+
+.feed-body{
+    overflow: auto;
+    border-bottom: thick dotted gray;
+    border-bottom-width: 2px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.post-body{
+    overflow: auto;
+    width: 60%;
+    margin-left: 50px;
+}
+#post-subtitle{
+    font-size: 150%;
+    color: gray;
+}
+
+.post-conteiner-title{
+    border-bottom: thick dotted gray;
+    border-bottom-width: 2px;
+    margin-bottom: 50px;
+}
+
+#post-img{
+    overflow: auto;
+    height: 400px;
+}
+
+#post-text{
+    color: #555;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 25px;
+    padding-bottom: 1.5em;
+    word-wrap: break-word;
+}
