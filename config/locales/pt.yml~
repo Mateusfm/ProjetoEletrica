@@ -19,6 +19,10 @@ pt:
 
   confirmations:
     success: Email confirmado com sucesso, obrigado!
+
+  aplication:
+    pesquisar: Pesquisar
+
   users:
     new: 
       title: Cadastro
@@ -28,10 +32,34 @@ pt:
       edit: Editar perfil
       title: "Perfil: %{user_name}"
 
+  produtos:
+    new:
+      title: Cadastrar Produto
+    edit:
+      title: Editar Produto
+
   user_sessions:
     new:
       title: Login
       signup: Cadastre-se
+  
+  links:
+    back: Voltar
+    show: Visualizar
+    edit: Editar
+    destroy: Excluir
+  
+  services:
+    new:
+      title: Cadastrar Serviço
+    edit:
+      title: Editar Serviço
+
+  posts:
+    edit:
+      title: Editar postagem
+    new:
+      title: Criar postagem
 
   signup:
     confirm_email:
@@ -47,9 +75,6 @@ pt:
               acesse o
               link: %{link}'
       thanks_html: 'Obrigado por se cadastrar no %{link}.'
-
-  links:
-    back: Voltar
 
   activerecord:
     models:
@@ -70,12 +95,16 @@ pt:
         titulo: Título
         subtitulo: Subtítulo
         text: Texto
+        photo: Imagem
       produto:
         nome: Nome
         descricao: Descrição
+        category_id: Categoria
+        photo: Imagem
       service:
         title: Título
         description: Descrição
+        photo: Imagem
   
   activemodel:
     attributes:

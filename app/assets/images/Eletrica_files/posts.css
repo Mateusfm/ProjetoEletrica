@@ -1,0 +1,81 @@
+/* line 1, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.feed-img {
+  margin: 5px;
+  float: left;
+  width: 50% px;
+  height: 200px;
+}
+
+/* line 9, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.feed-text {
+  margin: 5px;
+  float: left;
+  width: 50%;
+  height: 200px;
+}
+
+/* line 17, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+div.feed-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* line 24, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+div.feed-text h1 {
+  color: #2E8B57;
+  font-size: 2.0em;
+}
+
+/* line 29, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.link-title {
+  color: #2E8B57;
+  font-size: 2.0em;
+}
+
+/* line 35, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.feed-body {
+  overflow: auto;
+  border-bottom: thick dotted gray;
+  border-bottom-width: 2px;
+  width: 60%;
+  min-width: 200px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* line 46, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.post-body {
+  overflow: auto;
+  width: 60%;
+  margin-left: 50px;
+}
+
+/* line 51, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+#post-subtitle {
+  font-size: 150%;
+  color: gray;
+}
+
+/* line 56, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+.post-conteiner-title {
+  border-bottom: thick dotted gray;
+  border-bottom-width: 2px;
+  margin-bottom: 50px;
+}
+
+/* line 62, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+#post-img {
+  overflow: auto;
+  height: 400px;
+}
+
+/* line 67, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/posts.scss */
+#post-text {
+  color: #555;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25px;
+  padding-bottom: 1.5em;
+  word-wrap: break-word;
+}

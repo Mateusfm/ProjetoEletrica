@@ -1,21 +1,18 @@
     <% @posts.each do |post| %>
 
     <div class="feed-body">
+
                 <div class="feed-img">
                      <%= link_to (image_tag (post.imagem_mini)), post %>
                 </div>
 
-
-
         <div class="feed-text">
 
+    	   <%= link_to (post.titulo), post , class: 'link-title'%>
 
-    	     <%= link_to (post.titulo), post , class: 'link-title'%>
-
-
-                <p>
-    	     <%= link_to (post.subtitulo), post %>
-    	   </p>
+            <p>
+    	   <%= link_to (post.subtitulo), post %>
+    	</p>
 
         </div>
 
@@ -23,6 +20,4 @@
    </div>
 
 
-    <% end %>
-
-  </div>
+   <% end %>

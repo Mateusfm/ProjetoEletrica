@@ -22,19 +22,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
       if @user.save
 	Signup.confirm_email(@user).deliver
 
-        format.html { redirect_to @user, notice: 'Cadastro criado com sucesso' }
-        format.json { render :show, status: :created, location: @user }
+         redirect_to root_path, notice: 'Cadastro criado com sucesso'
+
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render action: :new
       end
-    end
   end
- 
+
 
   def update
     respond_to do |format|
@@ -74,7 +71,7 @@ class UsersController < ApplicationController
        end
     end
 
-   
+
     def user
       @user ||= User.find(params[:id])
     end

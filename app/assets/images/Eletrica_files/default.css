@@ -1,0 +1,220 @@
+/* line 10, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+* {
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+}
+
+/* line 19, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.item active, .item {
+  width: 460px;
+  height: 345px;
+}
+
+/* line 30, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header {
+  -moz-box-shadow: #ccc 0 3px 6px;
+  -webkit-box-shadow: #ccc 0 3px 6px;
+  box-shadow: #ccc 0 3px 6px;
+  margin-bottom: 15px;
+  height: 110px;
+}
+/* line 35, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 41, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top {
+  width: 100%;
+  margin: 0 auto;
+  height: 35px;
+  -moz-box-shadow: #ccc 0 3px 15px;
+  -webkit-box-shadow: #ccc 0 3px 15px;
+  box-shadow: #ccc 0 3px 15px;
+  margin-bottom: 15px;
+}
+/* line 49, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top #header-top-left {
+  width: 50%;
+}
+/* line 52, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top #header-top-left #p_cidade {
+  float: left;
+  width: 40%;
+  color: #a3a3a3;
+}
+/* line 60, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top-right {
+  margin-left: 40%;
+}
+/* line 63, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top-right #p_tel {
+  float: left;
+  text-align: right;
+  width: 75%;
+  color: #a3a3a3;
+}
+/* line 70, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #header-top-right #h3_tel {
+  margin-left: 35%;
+  padding: 10px;
+}
+/* line 80, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #h1titulo {
+  float: left;
+}
+/* line 84, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #h1titulo a {
+  color: #000000;
+  font-family: "Pacifico", "Georgia", serif;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+/* line 89, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header #h1titulo a:hover {
+  color: #FFA500;
+}
+
+/* line 98, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header nav {
+  float: right;
+  padding: 30px;
+}
+/* line 101, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header nav ul {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 55px;
+}
+/* line 107, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header nav li {
+  display: inline-block;
+  line-height: 24px;
+  background-color: #2E8B57;
+  padding: 12px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+/* line 117, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header nav li a {
+  color: #FFFFFF;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+}
+/* line 124, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+header nav li a:hover {
+  color: #000000;
+}
+
+/* line 132, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.content {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  -moz-box-shadow: #ccc 0 0px 2px;
+  -webkit-box-shadow: #ccc 0 0px 2px;
+  box-shadow: #ccc 0 0px 2px;
+}
+/* line 142, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.content h1 {
+  font-size: 2.5em;
+}
+/* line 146, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.content a, .content a:visited, .content a:hover {
+  color: #242;
+}
+/* line 149, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.content a:hover, .content a:visited:hover, .content a:hover:hover {
+  text-decoration: underline;
+}
+/* line 154, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+.content ul, .content form, .content p {
+  margin: 10px 0;
+}
+
+/* line 161, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form label {
+  display: block;
+  margin: 5px 0;
+  color: #444;
+}
+/* line 167, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form input[type=text], form input[type=password], form textarea {
+  color: #444;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 200px;
+  outline: 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+/* line 176, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
+  border: 1px solid #c9c9c9;
+}
+/* line 181, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form textarea {
+  width: 400px;
+  height: 200px;
+}
+/* line 187, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .field_with_errors {
+  display: inline;
+}
+/* line 190, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .field_with_errors label {
+  color: #B94A48;
+}
+/* line 192, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .field_with_errors input[type=text], form .field_with_errors input[type=password], form .field_with_errors textarea {
+  border: 1px solid rgba(189, 74, 72, 0.5);
+  -moz-box-shadow: rgba(189, 74, 72, 0.2) 0px 0px 8px;
+  -webkit-box-shadow: rgba(189, 74, 72, 0.2) 0px 0px 8px;
+  box-shadow: rgba(189, 74, 72, 0.2) 0px 0px 8px;
+}
+/* line 196, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .field_with_errors input[type=text]:focus, form .field_with_errors input[type=password]:focus, form .field_with_errors textarea:focus {
+  border: 1px solid rgba(189, 74, 72, 0.6);
+}
+/* line 200, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .error_message {
+  margin-left: 5px;
+  display: inline;
+  color: #B94A48;
+}
+/* line 206, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form .padded_flash, form #error_explanation, form #notice, form #alert {
+  padding: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  width: 500px;
+}
+/* line 212, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form #error_explanation {
+  border: 1px solid #B94A48;
+  color: #B94A48;
+  background-color: #F2DEDE;
+}
+/* line 219, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form #notice {
+  color: #468847;
+  border: 1px solid #468847;
+  background-color: #DFF0D8;
+}
+/* line 226, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+form #alert {
+  color: #B94A48;
+  border: 1px solid #B94A48;
+  background-color: #F2DEDE;
+}
+
+/* line 238, /home/mateus/Documents/ProjetoEletrica/app/assets/stylesheets/default.css.scss */
+footer {
+  margin-top: 100px;
+  border: 1px solid black;
+}

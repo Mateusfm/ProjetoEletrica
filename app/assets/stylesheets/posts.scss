@@ -1,23 +1,27 @@
 .feed-img {
     margin: 5px;
     float: left;
-    width: 300px;
+    width: 40%;
+    min-width: 190px;
     height: 200px;
 
 }
 
 .feed-text {
+    overflow: hidden;
     margin: 5px;
     float: left;
-    width: 300px;
+    width: 50%;
+    min-width: 190px;
     height: 200px;
 
 }
 
 div.feed-img img {
     width: 100%;
+    min-width: 190px;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
 
 }
 
@@ -37,7 +41,7 @@ div.feed-text h1 {
     border-bottom: thick dotted gray;
     border-bottom-width: 2px;
     width: 60%;
-    margin-left: 50px;
+    min-width: 200px;
     margin-top: 20px;
     padding-bottom: 10px;
 
