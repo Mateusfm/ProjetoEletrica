@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       if @user.save
 	Signup.confirm_email(@user).deliver
 
-         redirect_to root_path, notice: 'Cadastro criado com sucesso'
+         redirect_to root_path, notice: 'Cadastro criado com sucesso, acesse seu e-mail para confirmar o Cadastro'
 
       else
         render action: :new
