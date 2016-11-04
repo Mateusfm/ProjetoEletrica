@@ -32,5 +32,22 @@
 }
 
 .btn {
-    height: 50px
+    height: 50px;
+}
+
+.template-direita {
+      float: right;
+      width: 27%;
+      min-width: 190px;
+      overflow: hidden;
+      margin-right: 10px;
+
+}
+
+.celula-template-direita{
+      margin-bottom: 20px;
+}
+
+#link-noticia {
+      color: black;
 }

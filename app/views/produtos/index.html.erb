@@ -1,8 +1,8 @@
  <%= render 'form_search'%>
 
-    <% @produtos.each do |produto| %>
+ <div class="catalog">
 
-    <div>
+    <% @produtos.each do |produto| %>
 
 	<div class="catalog-celula">
                         <div class="img">
@@ -14,8 +14,10 @@
                                 <br>
                 	   <%= produto.descricao %>
                 	</div>
-
             </div>
-     </div>
 
     <% end %>
+
+</div>
+
+
