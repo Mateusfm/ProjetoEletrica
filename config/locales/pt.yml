@@ -1,7 +1,7 @@
 pt:
-  flash: 
+  flash:
     alert:
-      needs_login:  "Você precisa estar logado para continuar" 
+      needs_login:  "Você precisa estar logado para continuar"
     notice:
       signed_in: 'Login efetuado com sucesso!'
       signed_out: 'Logout efetuado com sucesso. Até logo!'
@@ -24,14 +24,19 @@ pt:
     pesquisar: Pesquisar
 
   users:
-    listing: Lista de usuarios
-    new: 
+    listing: Listar usuarios
+    new:
       title: Cadastro
     edit:
       title: Editar perfil
     show:
       edit: Editar perfil
       title: "Perfil: %{user_name}"
+
+  categories:
+    listing: Listar categorias
+    new:
+      title: Cadastrar categoria
 
   produtos:
     new:
@@ -43,13 +48,13 @@ pt:
     new:
       title: Login
       signup: Cadastre-se
-  
+
   links:
     back: Voltar
     show: Visualizar
     edit: Editar
     destroy: Excluir
-  
+
   services:
     new:
       title: Cadastrar Serviço
@@ -69,10 +74,10 @@ pt:
       body: |
           Seja bem vindo a eletrica.com, %{name}.
           No site Eletrica.com voce pode saber tudo sobre
-          nossa empresa, bem como conhecer nosso catalogo 
+          nossa empresa, bem como conhecer nosso catalogo
           de produtos e servicos.
 
-      confirm_link_html: 'Para confirmar seu cadastro, 
+      confirm_link_html: 'Para confirmar seu cadastro,
               acesse o
               link: %{link}'
       thanks_html: 'Obrigado por se cadastrar no %{link}.'
@@ -106,7 +111,7 @@ pt:
         title: Título
         description: Descrição
         photo: Imagem
-  
+
   activemodel:
     attributes:
       user_session:

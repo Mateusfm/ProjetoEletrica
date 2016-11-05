@@ -93,7 +93,9 @@ header {
      }
    }
 
-
+/*
+BARRA DE NAVEGACAO
+*/
 
 header nav {
    float: right;
@@ -129,6 +131,10 @@ header nav {
      }
 }
 
+/*
+    DIV CONTENT
+*/
+
  .content {
 	text-align: left;
 	width: $content-width;
@@ -161,6 +167,10 @@ form{
 	color: #444;
    }
 
+   /*
+   FORMULARIOS
+   */
+
    input[type=text], input[type=password], textarea {
 	color: #444;
 	font-size: 12px;
@@ -179,6 +189,10 @@ form{
 	width: 400px;
 	height: 200px;
    }
+
+   /*
+   TRATAR ERROS EM FORMULARIOS
+   */
 
 
  .field_with_errors {
@@ -227,17 +241,20 @@ form{
 	background-color: #F2DEDE;
  }
 
-
-
 }
 
+/*
+rodape
+*/
 
 footer {
 	margin-top: 100px;
 	border: 1px solid black;
-
  }
 
-
-
-
+/*
+    botao de acoes
+*/
+#edit {
+    backgroud-color: #2E8B57;
+}

@@ -35,8 +35,9 @@
 
  <div id="header-wrap">
     <p id="h1titulo"><%= link_to "elétrica.com", root_path%></p>
+
     <% if user_signed_in? %>
-	<%= render 'layouts/user_navbar' %>
+	 <%= render 'layouts/user_navbar' %>
     <% else %>
         <%= render 'layouts/visitor_navbar' %>
     <% end %>

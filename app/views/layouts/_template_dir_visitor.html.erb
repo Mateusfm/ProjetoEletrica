@@ -1,0 +1,27 @@
+<section class="section-template-dir">
+
+               <h2> Últimas notícias</h2>
+                  <hr>
+
+
+                        <ul >
+
+                        <% Post.take(3).each do |post| %>
+                           <div  class="celula-template-direita">
+
+                               <li>
+                                   <%= link_to (image_tag (post.imagem_mini)), post%>
+                               </li>
+
+                               <li class="li-link-noticia">
+                                   <%= link_to (post.titulo), post, :id => 'link-noticia'  %>
+                               </li>
+
+                            </div>
+
+                        <% end %>
+                        </ul>
+
+            <hr>
+
+</section>

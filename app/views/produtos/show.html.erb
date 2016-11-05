@@ -1,3 +1,12 @@
+<% if user_signed_in? %>
+ <% if policy(@produto).new? %>
+
+  <%= link_to t('links.edit'), edit_produto_path(@produto) %> |
+  <%= link_to t('links.destroy'), @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ <% end %>
+<% end %>
+
 <p>
   <%= image_tag(@produto.imagem) %>
 </p>
@@ -9,13 +18,3 @@
 <p>
   <%= @produto.descricao %>
 </p>
-
-<% if user_signed_in? %>
- <% if policy(@produto).new? %>
-
-  <%= link_to t('links.edit'), edit_produto_path(@produto) %> |
-  <%= link_to t('produtos.new.title'), new_produto_path %> |
-  <%= link_to t('links.destroy'), @produto, method: :delete, data: { confirm: 'Are you sure?' } %>
-
- <% end %>
-<% end %>

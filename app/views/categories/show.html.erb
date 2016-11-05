@@ -3,5 +3,5 @@
   <%= @category.name %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to t('links.edit'), edit_category_path(@category) %>
+<%= link_to t('links.destroy'), @category, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,53 +1,20 @@
 <div class="template-direita">
 
-        <section>
+    <% if user_signed_in? %>
+            <% if current_user.admin? %>
 
-            <h3> Categorias </h3>
-                <hr>
-            <div>
-                <ul >
+                <%= render 'layouts/template_dir_admin' %>
 
-                        <% Category.all.each do |category| %>
-                           <li>
-                              <%= link_to (category.name), category %>
-                           </li>
-                        <% end %>
-               </ul>
-            </div>
+            <% else %>
 
-            <hr>
+                <%= render 'layouts/template_dir_visitor' %>
 
-        </section>
+            <% end %>
 
-        <section>
-            <div>
+    <% else %>
 
-               <h2> Ultimas noticias</h2>
-                  <hr>
+            <%= render 'layouts/template_dir_visitor' %>
 
-                     <ul >
-
-                        <% Post.take(3).each do |post| %>
-                           <div  class="celula-template-direita">
-
-                               <li>
-                                   <%= link_to (image_tag (post.imagem_mini)), post%>
-                               </li>
-
-                               <li>
-                                   <%= link_to (post.titulo), post, :id => 'link-noticia'  %>
-                               </li>
-
-                            </div>
-
-                        <% end %>
-                   </ul>
-            </div>
-
-            <hr>
-
-        </section>
-
-
+    <% end %>
 
 </div>

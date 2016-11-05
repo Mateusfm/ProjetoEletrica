@@ -1,21 +1,21 @@
+<% if user_signed_in? %>
+     <% if policy(@service).new? %>
+
+          <%= link_to t('links.edit'), edit_service_path(@service) %> |
+          <%= link_to t('links.destroy'), @service, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+     <% end %>
+<% end %>
+
 <div>
   <%= image_tag(@service.imagem) %>
 </div>
 
-<div>
-  <%= @service.title %>
-</div>
+    <div>
+      <%= @service.title %>
+    </div>
 
 <div>
   <%= @service.description %>
 </div>
 
-<% if user_signed_in? %>
- <% if policy(@service).new? %>
-
-  <%= link_to t('links.edit'), edit_service_path(@service) %> |
-  <%= link_to t('services.new.title'), new_service_path %> |
-  <%= link_to t('links.destroy'), @service, method: :delete, data: { confirm: 'Are you sure?' } %>
-
- <% end %>
-<% end %>
