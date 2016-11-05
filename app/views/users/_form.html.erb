@@ -1,11 +1,17 @@
-<%= form_for(@user, :html => { :multipart => true }) do |f| %>
+<%= form_for(@user, :html => { :multipart => true  }) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
 
-      Há erros no formulário, por favor verifique. 
+      Há erros no formulário, por favor verifique.
 
     </div>
   <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+    <%= error_tag @user, :avatar %>
+  </div>
 
   <div class="field">
     <%= f.label :name %>

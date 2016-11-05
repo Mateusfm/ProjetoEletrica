@@ -1,8 +1,11 @@
-<p>
-  <h1>Perfil:
-    <%= @user.name %>
-  </h1>
-</p>
+<div class="avatar">
+       <%= image_tag(@user.imagem) %>
+</div>
+
+      <h1>Perfil:
+        <%= @user.name %>
+      </h1>
+
 
 <p>
   <strong>Email:</strong>
@@ -10,4 +13,3 @@
 </p>
 
 <%= link_to t('links.edit'), edit_user_path(@user) %> |
-<%= link_to t('links.back'), users_path %>

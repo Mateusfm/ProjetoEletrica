@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_no_authentication, only: [:new, :create]
-  before_action :can_change, only: [:edit, :update, :destroy, :show]
+  before_action :can_change, only: [:edit, :update, :destroy]
   before_action :require_authentication, only: [:index]
 
   def index
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
 
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
     end
 
     def can_change

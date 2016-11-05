@@ -1,11 +1,20 @@
-<nav> 
-  <ul> 
+<nav>
+  <ul>
     <li><%= link_to t('layout.home'), root_path%></li>
     <li><%= link_to t('layout.productos'), produtos_path %></li>
     <li><%= link_to t('layout.services'), services_path %></li>
     <li><%= link_to t('layout.posts'), posts_path %></li>
     <li> <%= link_to t('layout.my_profile'), user_path(current_user) %> </li>
-    <li> <%= link_to t('layout.signout'), user_sessions_path, method: :delete %> </li> 
+    <li> <%= link_to t('layout.signout'), user_sessions_path, method: :delete %> </li>
+
+    <li id="avatar-mini">
+
+        <%= link_to (image_tag(current_user.imagem)), "", :class => 'dropbtn' %>
+
+        <div class="dropdown-content">
+           <p>teste <%= link_to t('layout.signout'), user_sessions_path, method: :delete %></p>
+        </div>
+
+    </li>
   </ul>
 </nav>
-
