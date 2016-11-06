@@ -53,6 +53,7 @@ header {
 			float: left;
 			width: 40%;
 	    		color: #a3a3a3;
+                    overflow: hidden;
 	 		}
   	 }
 	}
@@ -65,11 +66,13 @@ header {
 			text-align: right;
 			width: 75%;
 			color: #a3a3a3;
+                    overflow: hidden;
 
                     }
 		   #h3_tel {
 			margin-left: 35%;
 			padding: 10px;
+                    overflow: hidden;
 
 		   }
 

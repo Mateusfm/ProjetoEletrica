@@ -13,15 +13,32 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td class="avatar-mini"> <%= image_tag(user.imagem)%> </td>
+      <tr class="tr">
+        <td id="avatar-mini"> <%= image_tag(user.imagem_mini)%> </td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
-        <td><%= link_to t('links.show'), user %></td>
-        <td><%= link_to t('links.edit'), edit_user_path(user) %></td>
-        <td><%= link_to t('links.destroy'), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td>
+
+            <div class="btn-acao">
+              <%= link_to t('links.show'), user %>
+            </div>
+
+        </td>
+        <td>
+
+          <div class="btn-acao">
+            <%= link_to t('links.edit'), edit_user_path(user) %>
+          </div>
+
+        </td>
+        <td>
+            <div class="btn-acao">
+              <%= link_to t('links.destroy'), user, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+        </td>
+    </tr>
+
     <% end %>
   </tbody>
 </table>

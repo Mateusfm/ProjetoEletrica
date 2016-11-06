@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
  has_secure_password
 
  has_attached_file :avatar,
-                 :styles  =>  {  :medium  =>  "300x300#",  :thumb  =>  "150x150"  },
+                 :styles  =>  {  :medium  =>  "300x300#",  :thumb  =>  "150x150>"  },
                  :default_url  =>  "avatar_default.jpg"
 validates_attachment :avatar,
                      :content_type => { :content_type => ['image/jpg', 'image/png', 'image/jpeg'] }
@@ -40,6 +40,10 @@ end
 
 def imagem
     "#{avatar.url(:thumb)}"
+end
+
+def imagem_mini
+  "#{avatar.url(:medium)}"
 end
 
 end

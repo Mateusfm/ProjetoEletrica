@@ -9,10 +9,14 @@
 
     <li id="avatar-mini">
 
-        <%= link_to (image_tag(current_user.imagem)), "", :class => 'dropbtn' %>
+        <%= link_to (image_tag(current_user.imagem_mini)), user_path(current_user) , :class => 'dropbtn' %>
 
         <div class="dropdown-content">
-           <p>teste <%= link_to t('layout.signout'), user_sessions_path, method: :delete %></p>
+
+            <p> <strong> <%= link_to (current_user.name), user_path(current_user)  %></strong> </p>
+
+
+           <p><%= link_to t('layout.sair'), user_sessions_path, method: :delete %></p>
         </div>
 
     </li>

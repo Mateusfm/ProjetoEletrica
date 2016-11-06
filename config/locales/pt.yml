@@ -8,6 +8,7 @@ pt:
       already_logged_in: "Você já está logado."
 
   layout:
+    sair: Sair
     home: Home
     productos: Produtos
     services: Serviços
