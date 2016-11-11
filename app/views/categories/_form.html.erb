@@ -2,15 +2,15 @@
   <% if @category.errors.any? %>
     <div id="error_explanation">
 
-	Há erros no formulário, por favor verifique.       
+	Há erros no formulário, por favor verifique.
 
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
-    <%= error_tag @category, :name %> 
+    <%= error_tag @category, :name %>
   </div>
 
   <div class="actions">
