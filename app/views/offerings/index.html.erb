@@ -1,0 +1,24 @@
+<h1> <%= t('offerings.listing.title') %> </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offerings.each do |offering| %>
+      <tr>
+        <td><%= offering.produto.nome %></td>
+        <td><%= link_to t('links.show'), offering %></td>
+        <td><%= link_to t('links.destroy'), offering, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('offerings.new.title'), new_offering_path %>

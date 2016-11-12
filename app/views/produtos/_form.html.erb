@@ -2,7 +2,7 @@
   <% if @produto.errors.any? %>
     <div id="error_explanation">
 
-      Há erros no formulário, por favor verifique. 
+      Há erros no formulário, por favor verifique.
 
     </div>
   <% end %>
@@ -10,7 +10,7 @@
   <div class="field">
     <%= f.label :nome %>
     <%= f.text_field :nome %>
-    <%= error_tag @produto, :nome %> 
+    <%= error_tag @produto, :nome %>
   </div>
 
   <div class="field">
@@ -21,7 +21,7 @@
 
   <div class="field">
     <%= f.label :category_id %>
-    <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true %>
+    <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: false %>
 
     <span class="help">Ou crie uma </span>
 

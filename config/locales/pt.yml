@@ -25,7 +25,7 @@ pt:
     pesquisar: Pesquisar
 
   users:
-    listing: Listar usuarios
+    listing: Listar Usuários
     new:
       title: Cadastro
     edit:
@@ -35,9 +35,9 @@ pt:
       title: "Perfil: %{user_name}"
 
   categories:
-    listing: Listar categorias
+    listing: Listar Categorias
     new:
-      title: Cadastrar categoria
+      title: Cadastrar Categoria
 
   produtos:
     new:
@@ -64,9 +64,15 @@ pt:
 
   posts:
     edit:
-      title: Editar postagem
+      title: Editar Postagem
     new:
-      title: Criar postagem
+      title: Criar Postagem
+
+  offerings:
+    new:
+      title: Adicionar Oferta
+    listing:
+      title: Listar Ofertas
 
   signup:
     confirm_email:
@@ -90,6 +96,7 @@ pt:
       post: Postagem
       produto: Produto
       service: Serviço
+      offering: Oferta
     attributes:
       user:
         name: Nome

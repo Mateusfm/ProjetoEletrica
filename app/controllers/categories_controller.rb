@@ -1,28 +1,28 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :require_authentication, only: [:edit, :update, :destroy, :new, :create, :index]
-  
+
   def index
     authorize Category
     @categories = Category.all
   end
 
-  
+
   def show
   end
 
-  
+
   def new
     authorize Category
     @category = Category.new
   end
 
-  
+
   def edit
     authorize @category
   end
 
-  
+
   def create
     @category = Category.new(category_params)
 
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  
+
   def update
     respond_to do |format|
 
@@ -67,12 +67,12 @@ class CategoriesController < ApplicationController
   end
 
   private
-   
+
     def set_category
       @category = Category.find(params[:id])
     end
 
-   
+
     def category_params
       params.require(:category).permit(:name)
     end

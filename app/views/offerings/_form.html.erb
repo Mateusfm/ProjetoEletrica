@@ -1,0 +1,12 @@
+<%= form_for(@offering) do |f| %>
+
+  <div class="field">
+    <%= f.label :produto_id %>
+    <%= f.collection_select :produto_id, Produto.order(:nome),:id,:nome, include_blank: false %>
+    <%= error_tag @offering, :produto_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

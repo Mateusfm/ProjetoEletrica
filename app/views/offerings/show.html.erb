@@ -1,0 +1,17 @@
+  <strong>Em Oferta</strong>
+
+  <div class="catalog-celula">
+                        <div class="img">
+                     <%= image_tag (@offering.produto.imagem)%>
+                        </div>
+
+                  <div class="desc">
+                     <%= @offering.produto.nome %>
+                                <br>
+                     <%= @offering.produto.descricao %>
+                  </div>
+  </div>
+
+  <p>
+      <%= link_to t('links.back'), offerings_path %>
+  </p>

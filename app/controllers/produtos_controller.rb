@@ -5,19 +5,19 @@ class ProdutosController < ApplicationController
 
   def index
     @q = Produto.ransack(params[:q])
-    @produtos = @q.result(distinct: true)   
+    @produtos = @q.result(distinct: true)
   end
 
 
   def show
-	
+
   end
 
-  
+
   def new
       authorize Produto
       @produto = Produto.new
-    
+
   end
 
 
@@ -25,7 +25,7 @@ class ProdutosController < ApplicationController
     authorize @produto
   end
 
- 
+
   def create
     @produto = Produto.new(produto_params)
 
@@ -40,6 +40,11 @@ class ProdutosController < ApplicationController
         format.json { render json: @produto.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def create_offering
+    @offering = @produto.offering.create
+
   end
 
 
@@ -58,7 +63,7 @@ class ProdutosController < ApplicationController
     end
   end
 
- 
+
   def destroy
 
     authorize @produto

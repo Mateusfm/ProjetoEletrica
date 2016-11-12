@@ -1,10 +1,10 @@
  <div id="home-slider">
   <ul class="bxslider">
 
-	<% @produtos.each do |produto| %> 
-     <li> 
-	  <%= link_to (image_tag produto.imagemSlide), produto%>
-     </li> 
-        <% end %> 
+	<% @offerings.each do |offering| %>
+     <li>
+	  <%= link_to (image_tag offering.produto.imagemSlide), offering.produto%>
+     </li>
+        <% end %>
   </ul>
  </div>

@@ -1,5 +1,7 @@
 class Produto < ActiveRecord::Base
   belongs_to :category
+  has_one :offering
+
   validates_presence_of :nome, :descricao, :photo, :category_id
 
   attr_accessor :new_category_name

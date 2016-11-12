@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
    def index
-      @produtos = Produto.take(3)
+      @offerings = Offering.all
    end
 end
