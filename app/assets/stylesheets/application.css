@@ -112,6 +112,7 @@
 }
 
 .celula-template-direita{
+      overflow: hidden;
       background-color: white;
       margin-bottom: 30px;
       width: 100%;

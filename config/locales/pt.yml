@@ -74,6 +74,10 @@ pt:
     listing:
       title: Listar Ofertas
 
+  contacts:
+    new:
+      title: Envie um e-mail e teremos muito prazer em atende-lo
+
   signup:
     confirm_email:
       subject: 'Eletrica.com - Confirme seu email'
@@ -103,6 +107,7 @@ pt:
         email: Email
         password: Senha
         password_confirmation: Confirme sua senha
+        avatar: Imagem de perfil
       category:
         name: Nome
       post:

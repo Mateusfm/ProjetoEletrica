@@ -4,6 +4,13 @@
               <%= link_to (image_tag (service.imagem)), service%>
             </div>
 
+      <% if user_signed_in? %>
+            <% if current_user.admin? %>
+                <%= link_to t('links.edit'), edit_service_path(service) %> |
+                <%= link_to t('links.destroy'), @service, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+      <% end %>
+
       <div class="feed-text">
 
         	<h1>
@@ -16,7 +23,7 @@
 
       </div>
 
-      <div style ="width: 190px; float: right;">
+      <div id="link-orc">
         <%= link_to 'Pedir orçamento', new_contact_path %>
       </div>
 

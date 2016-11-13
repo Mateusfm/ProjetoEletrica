@@ -37,7 +37,7 @@ div.feed-text h1 {
 
 
 .feed-body{
-    overflow: auto;
+    overflow: hidden;
     border-bottom: thick dotted gray;
     border-bottom-width: 2px;
     width: 60%;
@@ -47,8 +47,20 @@ div.feed-text h1 {
 
 }
 
+#link-orc {
+    width: 190px;
+    float: right;
+    margin-botton: 10px;
+}
+
+#link-orc a {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+}
+
 .post-body{
-    overflow: auto;
+    overflow: hidden;
     width: 60%;
     margin-left: 50px;
 }
