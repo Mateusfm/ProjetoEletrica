@@ -142,7 +142,7 @@ header nav {
 	text-align: left;
 	width: $content-width;
 	margin: 0 auto;
-             overflow: auto;
+       overflow: auto;
 
 
  h1 {
@@ -265,8 +265,15 @@ footer {
 
  }
 
+ .menu-rodape {
+      width: 100px;
+      margin: auto;
+ }
+ .menu-rodape p {
+      text-align: center;
+ }
 /*
-    botao de acoes
+    BOTAO DE ACOES
 */
 #edit {
     backgroud-color: #2E8B57;
